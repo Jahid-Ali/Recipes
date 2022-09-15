@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 40px 24px;
+  background-color: rgb(234 255 248);
+}
+
+.app h1 {
+  font-family: cursive;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  color: #047fbd;
+  margin-bottom: 25px;
+}
+
+.form {
+  margin-top: 25px;
+  width: 60%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 1rem;
+}
+
+.input {
+  padding: 6px 10px;
+  width: 60%;
+  font-size: 16px;
+  font-family: cursive;
+  outline: none;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+.submit {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
   color: white;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff3c00, #581919);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  transition: 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.submit:hover {
+  box-shadow: 4px 4px 8px #d33100, -4px -4px 8px #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.healthLabels {
+  padding: 7px 0px;
+  font-size: 16px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  outline: none;
+}
+
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 3px 10px 0 rgb(77, 243, 110);
+}
+
+.recipe__img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.recipe__name {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(67, 67, 67);
+  margin: 14px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+}
+
+.ingredients {
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  color: rgb(39, 39, 39);
+  cursor: pointer;
+  background: linear-gradient(145deg, #00c12d, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  transition: 0.3s;
+}
+
+.ingredients:hover {
+  box-shadow: 4px 4px 8px #30dd59, -4px -4px 8px #ffffff;
+}
+
+/*------------popup--------*/
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(246, 246, 246, 0);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_h1 {
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  background: #f0f3f5;
+  padding: 15px 30px;
+  z-index: 9999;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  border-radius: 10px;
+}
+
+.modal-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-text p {
+  font-size: 15px;
+  margin: 22px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 20px;
+  color: #ff014f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
